@@ -1,25 +1,29 @@
-import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import Posts from "./components/posts";
+import PostLoadingComponent from "./components/postLoading";
 
-class App extends Component {
-  render() {
-    // ...
-  }
+function App() {
+  const PostLoading = PostLoadingComponent(Posts);
+  const [appState, setAppState] = useState({
+    loading: false,
+    posts: null,
+  });
+
+  useEffect(() => {
+    setAppState({ loading: true });
+    const apiUrl = `http://127.0.0.1:8000/api/`;
+    fetch(apiUrl)
+      .then((data) => data.json())
+      .then((posts) => {
+        setAppState({ loading: false, posts: posts });
+      });
+  }, [setAppState]);
+  return (
+    <div className="App">
+      <h1>Latest Posts</h1>
+      <PostLoading isLoading={appState.loading} posts={appState.posts} />
+    </div>
+  );
 }
-
 export default App;
-
-// import React from "react";
-
-// class App extends React.Component {
-//   component() {
-//     const apiUrl = `https://daily-thoughts-app.herokuapp.com/api/register/`;
-//     fetch(apiUrl)
-//       .then((response) => response.json())
-//       .then((data) => console.log(data));
-//   }
-//   render() {
-//     return <div>Connection</div>;
-//   }
-// }
-// export default App;
