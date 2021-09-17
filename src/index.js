@@ -6,6 +6,8 @@ import App from "./App";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Register from "./components/register";
+import Login from "./components/login";
+import Logout from "./components/logout";
 
 const routing = (
   <Router>
@@ -14,6 +16,8 @@ const routing = (
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/register" component={Register} />
+        <Route path="/login" component={Login} />
+        <Route path="/logout" component={Logout} />
       </Switch>
       <Footer />
     </React.StrictMode>
@@ -21,6 +25,7 @@ const routing = (
 );
 
 ReactDOM.render(routing, document.getElementById("root"));
+
 // FROM REACT
 // ReactDOM.render(
 //   <React.StrictMode>
