@@ -12,6 +12,12 @@ const useStyles = makeStyles((theme) => ({
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
   },
+  link: {
+		margin: theme.spacing(1, 1.5),
+	},
+	toolbarTitle: {
+		flexGrow: 1,
+	},
 }));
 
 function Header() {
