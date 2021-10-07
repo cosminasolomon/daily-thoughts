@@ -4,6 +4,10 @@
 <p align="left">Daily Thoughts is a pocket diary app, built for users to instantly pen down their thoughts wherever they are. A minimalist design that keeps in tone with the familiar pen and paper journal.
 </p>
 
+<h3 align="left">App demo</h3>
+<p align="left"><img src="https://github.com/cosminasolomon/daily-thoughts/blob/master/homepage-diary.JPG" /></p>
+<p align="left"><img src="https://github.com/cosminasolomon/daily-thoughts/blob/master/post-diary.JPG" /></p>
+
 <h3 align="left">Used technologies</h3>
 
 <ul>
