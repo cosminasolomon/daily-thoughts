@@ -20,6 +20,16 @@
 <li>PostgreSQL</li>
 </ul>
 
+<h3 align="left">User Stories</h3>
+
+<ul>
+<li>As a page visitor, I can sign up and log in as a user.</li>
+<li>As a user, I can see all my entries and the date they were posted.</li>
+<li>As a user, I can create, update and delete my daily entries.</li>
+
+
+</ul>
+
 <h3 align="left">Backend server repo</h3>
 
 <p>Go to <a href="https://github.com/cosminasolomon/daily-thoughts-app">the backend repository</a></p>
